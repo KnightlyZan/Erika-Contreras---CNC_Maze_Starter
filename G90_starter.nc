@@ -1,6 +1,6 @@
 %
-O[your six digit birthdate]  
-([your name] MAZE) 
+O042910 
+(Erika MAZE) 
 (Startup Process)
 T1 M06 	 		(Select tool)
 G54 			(Use Work Offset G54)		
@@ -10,12 +10,24 @@ G43 H01 Z1.0 	(Use Tool Offset #1)
 (END Startup Process)
 
 (GO TO THE STARTING POINT AND DROP THE PEN)
-G01 [your xy start position] F12.0		(Go to start position and set Cutting Speed to 12 in/min)
+G01 X0.0 Y0.0 F12.0		(Go to start position and set Cutting Speed to 12 in/min)
 M03 S1000		(Spin the pen for better precision)
 Z0.0			(Move the pen to the paper)
 
 (MOVEMENTS TO SOLVE THE MAZE)
-[put the G90 XY coordinate pairs here]
+X0.0 Y0.5 (NORTH)
+X1.0 Y0.5 (EAST)
+X1.0 Y1.5 (NORTH)
+X0.5 Y1.5 (WEST)
+X0.5 Y3.75 (NORTH)
+X1.25 Y3.75 (EAST)
+X1.25 Y3.25 (SOUTH)
+X1.75 Y3.25 (EAST)
+X1.75 Y4.25 (NORTH)
+X0.75 Y4.25 (WEST) (10)
+X0.75 Y4.75 (NORTH)
+X2.25 Y4.75(EAST) (12)
+X
 
 (END SEQUENCE)
 G00 G53 Z0.0	(Raise the pen) 
